@@ -1,0 +1,21 @@
+---
+# tasks file for ansible_role_setup_vsftpd
+- name: Perform platform/version specific tasks
+  include_tasks: "{{ lookup('first_found', __rolename_ff_params) }}"
+  vars:
+    __rolename_ff_params:
+      files:
+        - "{{ ansible_facts['distribution'] }}_{{ 
+          ansible_facts['distribution_version'] }}.yml"
+        - "{{ ansible_facts['os_family'] }}.yml"
+      paths:
+        - "{{ role_path }}/tasks/setup"
+      skip: true
+
+- name: Template vsftpd.conf
+  ansible.builtin.template:
+    src: vsftpd.conf.j2
+    dest: /etc/vsftpd.conf
+    owner: root
+    group: root
+    mode: '0644'
