@@ -1,6 +1,10 @@
 Setup vsftpd
 ============
 
+**Call for testing:** This is a new Ansible role. Though it's fairly simple as it only makes sure that `vsftpd` is installed and a certain config is templated, I'm looking for some folks to try and test it.
+
+So if you find the time, test it and report any issues, please. It's much appreciated. :-)
+
 Installs and configures vsftpd on Debian and EL platforms. It supports all options from vsftpd.conf/5). Be aware that this role replaces the /etc/vsftpd.conf file that is shipped with your distribution's package.
 
 Role Variables
