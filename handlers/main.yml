@@ -1,0 +1,5 @@
+---
+- name: Reload vsftpd
+  ansible.builtin.service:
+    name: vsftpd
+    state: reloaded
