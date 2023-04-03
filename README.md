@@ -5,7 +5,7 @@ Setup vsftpd
 
 So if you find the time, test it and report any issues, please. It's much appreciated. :-)
 
-Installs and configures vsftpd on Debian and EL platforms. It supports all options from vsftpd.conf/5). Be aware that this role replaces the /etc/vsftpd.conf file that is shipped with your distribution's package.
+Installs and configures vsftpd on Debian and EL platforms. It supports all options from vsftpd.conf/5). Be aware that this role replaces the /etc/vsftpd.conf file that is shipped with your distribution's package. If you run it without further configuration, it sets the options configured in `defaults/main.yml`.
 
 Role Variables
 --------------
